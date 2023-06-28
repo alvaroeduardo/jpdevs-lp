@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Space+Grotesk:wght@300&display=swap');
+
+:root{
+    --red: #ef1923;
+    --dark: #120a21;
+    --black: #050505;
+    --white: #ffffff;
+    --font-main: 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+*::selection{
+    background-color: #ef1923;
+    color: var(--white);
+}
+
+body{
+    background-image: url("./img/Background.png");
+    /* background-size: cover; */
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 4rem;
+}
+
+#header > img {
+    width: 8vw;
+}
+
+#main {
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 89vh;
+}
+
+#main > #title{
+    font-family: 'Russo One', sans-serif;
+    color: var(--white);
+    font-size: 5vw;
+}
+
+#main > #title > span {
+    font-family: 'Russo One', sans-serif;
+    color: var(--red);
+}
+
+#main > #description {
+    color: var(--white);
+    letter-spacing: 1px;
+    font-size: 1vw;
+    margin: 16px 0 0 0;
+}
+
+#main::before{
+    content: url("./img/logo.svg");
+    position: fixed;
+    right: 0;
+    opacity: 0.05;
+    transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 768px) {
+    #header {
+        justify-content: center;
+    }
+
+    #main {
+        align-items: center;
+        text-align: center;
+    }
+}
