@@ -13,11 +13,44 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: #EF1923 rgba(255,255,255, 0);
 }
 
 *::selection{
     background-color: #ef1923;
     color: var(--white);
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+    width: 10px;
+}
+*::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: rgba(255,255,255, 0);
+}
+  
+*::-webkit-scrollbar-track:hover {
+    background-color: rgba(255,255,255, 0);
+}
+  
+*::-webkit-scrollbar-track:active {
+    background-color: rgba(255,255,255, 0);
+}
+  
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #EF1923;
+}
+  
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #F01923;
+}
+  
+*::-webkit-scrollbar-thumb:active {
+    background-color: #ef1923;
 }
 
 body{
@@ -99,6 +132,11 @@ body{
     letter-spacing: 1px;
     font-size: 0.8vw;
     margin: 16px 0 32px 0;
+}
+
+#our-services > .description-services > span {
+    color: var(--white);
+    background-color: var(--red);
 }
 
 #our-services > .card-group {
