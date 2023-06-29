@@ -5,7 +5,6 @@
     --dark: #120a21;
     --black: #050505;
     --white: #ffffff;
-    --font-main: 
 }
 
 *{
@@ -130,8 +129,8 @@ body{
 #our-services > .description-services {
     color: var(--black);
     letter-spacing: 1px;
-    font-size: 0.8vw;
-    margin: 16px 0 32px 0;
+    font-size: 1vw;
+    margin: 2rem 6rem;
 }
 
 #our-services > .description-services > span {
@@ -166,12 +165,57 @@ body{
 }
 
 #our-services > .card-group > .card > img {
-    width: 15vw;
+    width: 10vw;
+    margin: .5rem 0;
 }
 
 #our-services > .card-group > .card > .card-description {
     text-align: center;
     font-size: 0.6vw;
+}
+
+#our-clients {
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#our-clients > .title-services {
+    font-family: 'Russo One', sans-serif;
+    color: var(--white);
+    font-size: 2vw;
+}
+
+#our-clients > .title-services > span {
+    font-family: 'Russo One', sans-serif;
+    color: var(--red);
+}
+
+#our-clients > .description-services {
+    color: var(--white);
+    letter-spacing: 1px;
+    font-size: 1vw;
+    margin: 2rem 6rem;
+}
+
+#our-clients > .description-services > span {
+    color: var(--white);
+    background-color: var(--red);
+}
+
+#our-clients > .clients-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 2rem;
+}
+
+#our-clients > #clients-container > img {
+    width: 10vw;
+    margin: 0 1rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -191,6 +235,14 @@ body{
 
     #our-services > .card-group > .card {
         width: 90%;
+    }
+
+    #our-services > .description-services {
+        margin: 2rem;
+    }
+
+    #our-clients > .description-services {
+        margin: 2rem;
     }
 
     #our-services > .card-group > .card > .card-title {
