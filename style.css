@@ -22,7 +22,8 @@
 
 body{
     background-image: url("./img/Background.png");
-    /* background-size: cover; */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #header{
@@ -42,7 +43,7 @@ body{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 89vh;
+    height: 100vh;
 }
 
 #main > #title{
@@ -63,12 +64,76 @@ body{
     margin: 16px 0 0 0;
 }
 
-#main::before{
-    content: url("./img/logo.svg");
-    position: fixed;
+#main > .logo{
+    position: absolute;
     right: 0;
     opacity: 0.05;
-    transform: rotate(-45deg);
+    width: 60vw;
+    z-index: -1;
+}
+
+#our-services {
+    width: 100%;
+    height: 80%;
+    background-color: var(--white);
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#our-services > .title-services {
+    font-family: 'Russo One', sans-serif;
+    color: var(--black);
+    font-size: 2vw;
+}
+
+#our-services > .title-services > span {
+    font-family: 'Russo One', sans-serif;
+    color: var(--red);
+}
+
+#our-services > .description-services {
+    color: var(--black);
+    letter-spacing: 1px;
+    font-size: 0.8vw;
+    margin: 16px 0 32px 0;
+}
+
+#our-services > .card-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+}
+
+#our-services > .card-group > .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 9px 35px -6px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 0px 9px 35px -6px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px 9px 35px -6px rgba(0,0,0,0.47);
+    border-radius: 16px;
+    padding: 4rem 2rem;
+    width: 20%;
+}
+
+#our-services > .card-group > .card > .card-title {
+    font-family: 'Russo One', sans-serif;
+    color: var(--black);
+    font-size: 1vw;
+}
+
+#our-services > .card-group > .card > img {
+    width: 15vw;
+}
+
+#our-services > .card-group > .card > .card-description {
+    text-align: center;
+    font-size: 0.6vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -79,5 +144,22 @@ body{
     #main {
         align-items: center;
         text-align: center;
+    }
+
+    #our-services > .card-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #our-services > .card-group > .card {
+        width: 90%;
+    }
+
+    #our-services > .card-group > .card > .card-title {
+        font-size: 2vw;
+    }
+
+    #our-services > .card-group > .card > .card-description {
+        font-size: 1.2vw;
     }
 }
